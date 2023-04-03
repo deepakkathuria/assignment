@@ -39,8 +39,8 @@ const Products = ({ match }) => {
     resultPerPage,
     filteredProductsCount,
   } = useSelector((state) => state.products);
-
   const keyword = match.params.keyword;
+  console.log(products,"productvalue")
 
   const setCurrentPageNo = (e) => {
     setCurrentPage(e);

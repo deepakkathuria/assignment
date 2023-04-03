@@ -77,5 +77,10 @@ const productSchema = mongoose.Schema({
     default: Date.now,
   },
 });
+// const Product = mongoose.model('Product', productSchema);
+
+// Product.createCollection().then(function (collection) {
+//   console.log('Collection is created!');
+// });
 
 module.exports = mongoose.model("Product", productSchema);

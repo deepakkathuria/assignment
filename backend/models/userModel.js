@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema({
   avatar: {
     public_id: {
       type: String,
-      required: true,
+      // required: true,
     },
     url: {
       type: String,
-      required: true,
+      // required: true,
     },
   },
   role: {
@@ -83,4 +83,18 @@ userSchema.methods.getResetPasswordToken = function () {
   return resetToken;
 };
 
+
+
+// const User = mongoose.model("User",userSchema)
+
+// const newUser = new User({
+//   name: "Ayush",
+// });
+// newUser.save((err, res) => {
+//   if (err) return handleError(err);
+//   else return console.log("Result: ", res)
+// });
+// User.createCollection().then(function (collection) {
+//   console.log('Collection is created!');
+// });
 module.exports = mongoose.model("User", userSchema);

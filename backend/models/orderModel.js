@@ -104,5 +104,9 @@ const orderSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+// const Order = mongoose.model('Order', orderSchema);
 
+// Order.createCollection().then(function (collection) {
+//   console.log('Collection is created!');
+// });
 module.exports = mongoose.model("Order", orderSchema);
